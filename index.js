@@ -50,6 +50,23 @@ if(cmd === `${prefix}goodm`){
   message.delete().catch(O_o=>{});
   message.reply("Good Morning!");
 }
+  
+  //help command
+if(cmd === `${prefix}help`){
+  message.delete().catch(O_o=>{});
+  let icon = bot.user.displayAvatarURL
+  let embed = new Discord.RichEmbed()
+  .addField("prefix", ".")
+  .addField(".twit", "Send you my twitter profile")
+  .addField(".be", "Send you my Behance profile")
+  .addField(".goodm", "try it out!")
+  .setDescription("Bot help")
+  .addField("Bot creator", "avishaiDV ♥")
+  .setFooter("bot made by avishaiDV")
+  .setColor('RANDOM')
+  .setThumbnail(icon);
+  message.channel.send(embed)
+}
 
 
 });
